@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <title>Business Landing</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans&display=swap" rel="stylesheet">
@@ -15,14 +15,27 @@
                 <div class="logo">
                     <img src="img/logo.png" alt="logo">
                 </div>
+                <div class="dropdown">
+                    <a onclick="myFunction()" class="dropbtn">
+                        Menu
+                    </a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Home</a>
+                        <a href="#pages">Pages</a>
+                        <a href="#features">Features</a>
+                        <a href="#extensions">Extensions</a>
+                        <a href="#tutorials">Tutorials</a>
+                        <a href="#contact">Contact us</a>
+                    </div>
+                </div>
                 <nav class="menu">
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Extensions</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#pages">Pages</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#extensions">Extensions</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav>
                 <div class="social">
@@ -40,7 +53,7 @@
 
     <main>
         <!-- 1 BLOCK -->
-        <section class="features"> 
+        <section class="features" id="features"> 
             <div class="block-container">
                 <div class="heading" id="heading__W">
                     we are an awesome agency
@@ -88,7 +101,7 @@
 
         <!-- 2 BLOCK -->
 
-        <section class="blog">
+        <section class="blog" id="pages">
             <div class="blog-post" id="blog1">
                 <div class="grid-block__item">
                     <div class="blog-post__content">
@@ -112,12 +125,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="grid-block__item" id="blog3__img"></div>
             </div>
         </section>
 
         <!-- 3 BLOCK -->
 
-        <section class="solutions">
+        <section class="solutions" id="extensions">
             <div class="block-container">
                 <div class="heading" id="heading__B">let's blog</div>
                 <div class="sub-heading">We love clean design and advanced digital solutions.</div>
@@ -194,13 +208,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="app__img"></div>
+                <div class="app__img">
+                    <img src="img/phone.png" alt="">
+                </div>
             </div>
         </section>
 
         <!-- 6 BLOCK -->
 
-        <section class="team">
+        <section class="team" id="tutorials">
             <div class="block-container">
                 <div class="heading" id="heading__T">Our Team</div>
                 <div class="sub-heading">sales long tail influencer pitch release niche market.</div>
@@ -233,7 +249,7 @@
         </section>
 
         <section class="seventh-block">
-            <div class="feedback">
+            <div class="feedback" id="contact">
                 <div class="heading" id="heading__C">We’d love to hear about your project.</div>
                 <form class="feedback__form" action="message">
                     <input type="text" name="name" placeholder="Name">
@@ -260,5 +276,8 @@
             <div class="footer-text">Hordovskyi Mykhailo, 2020</div>
         </div>
     </footer>
+
+
+    <script src="scripts/dropMenu.js"></script>
 </body>
 </html>

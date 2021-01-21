@@ -1,17 +1,28 @@
 *{
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 24px;
 }
-a{
+a, a:hover, a:active{
     text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 ul{
     list-style-type: none;
+}
+input:focus, textarea:focus, button:focus, a:active{
+    outline: none;
+}
+a:active{
+    border: none;
 }
 header{
     font-family: 'PT Sans', sans-serif;
@@ -38,6 +49,9 @@ header a{
 }
 .logo{
     margin-right: 50px;
+}
+.dropdown{
+    display: none;
 }
 .menu ul{
     display: flex;
@@ -143,13 +157,15 @@ header a{
     margin: 0 15px;
 }
 .features__list__item__img{
-    padding: 50px;
     background-color: #2e85aa;
     margin: 0 auto;
     border-radius: 100px;
-    width: 10%;
+    width: 133px;
     display: flex;
     justify-content: center;
+}
+.features__list__item__img img{
+    padding: 50px;
 }
 .features .list__item__heading{
     margin-top: 20px;
@@ -202,6 +218,13 @@ header a{
     background-size: 100%;
     background-repeat: no-repeat;
     height: 470px;
+}
+#blog3__img{
+    background-image: url(img/photo2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 470px;
+    display: none;
 }
 .blog-post__img{
     width: 50%;
@@ -314,10 +337,13 @@ header a{
     width: 70%;
 }
 .app__img{
-    background: url(img/phone.png) center no-repeat;
-    width: 350px;
-    height: 650px;
+    width: 60%;
     margin: 0 auto; 
+    display: flex;
+    align-items: center;
+}
+.app__img img{
+    width: 100%;
 }
 
 /* 6 BLOCK */ 
@@ -473,10 +499,6 @@ footer{
 }
 
 @media screen and (max-width: 1600px){
-    .features__list__item__img{
-        padding: 45px;
-        width: 13%;
-    }
     .team__list__item{
         width: 25%;
     }
@@ -515,11 +537,328 @@ footer{
     .blog-post__content__date{
         font-size: 11px;
     }
-    #blog1__img, #blog2__img{
+    #blog1__img, #blog2__img, #blog3__img{
         height: 425px;
     }
     .feedback__form input{
         width: 26%;
     }
+}
+@media screen and (max-width: 1024px){
+    body{
+        font-size: 13px;
+        line-height: 17px;
+    }
+    header{
+        font-size: 16px;
+    }
+    .header__container__nav{
+        width: 95%;
+    }
+    .logo{
+        margin-right: 10px;
+    }
+    .header__container__nav > div{
+        padding: 0 2%;
+    }
+    .menu li{
+        margin: 0 20px;
+    }
+    .header__container__text{
+        font-size: 130px;
+    }
+    .heading{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .sub-heading{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .content__heading{
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .list__item__heading{
+        font-size: 16px;
+    }
+    .block-container{
+        width: 85%;
+    }
+    .features__list__item__img{
+        width: 110px;
+    }
+    .features__list__item__img img{
+        padding: 40px;
+    }    
+    .blog-post__content{
+        padding-top: 30px;
+        width: 80%;
+    }
+    #blog1 .blog-post__content{
+        width: 90%;
+    }
+    .blog-post .list__item__text{
+        margin-top: 20px;
+    }
+    #blog1__img, #blog2__img, #blog3__img{
+        height: 300px;
+    }
+    .writing__item{
+        width: 45%;
+        justify-content: space-between;
+    }
+    .app .content__heading{
+        margin-top: 70px;
+    }
+    .app__content__text{
+        width: 95%;
+    }
+    .app__img{
+        width: 70%;
+    }
+    .feedback__form input{
+        width: 31%;
+    }
+}
 
+@media screen and (max-width: 768px){
+    .logo{
+        margin: 0px 2%;
+    }
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    .dropbtn{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .menu{
+        display: none;
+    }
+    .dropdown img{
+        max-width: 25px;
+    }
+    .dropdown-content{
+        background-color: rgb(73, 72, 72);
+        display: none;
+        position: absolute;
+        left: -85px;
+        text-align: center;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding: 20px 60px;
+        font-size: 24px;
+    }
+    .dropdown-content a:not(:first-child){
+        display: block;
+        margin-top: 25px;
+    }
+    .show{
+        display: block;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .social a{
+        width: 40%;
+        margin: 0;
+        padding: 5px;
+    }
+    .header__container__nav > div{
+        padding: 0;
+    }
+    .header__container__text{
+        font-size: 110px;
+    }
+    .features__list{
+        flex-wrap: wrap;
+    }
+    .features__list__item{
+        width: 40%;
+        margin-top: 20px;
+    }
+    .blog-post{
+        grid-template-columns: 1fr;
+    }
+    .blog-post__content{
+        padding: 0;
+        margin: 0 auto;
+        padding-top: 40px; 
+    }
+    .blog-post__content .list__item__text{
+        padding-bottom: 70px;  
+    }
+    #blog2__img{
+        display: none;
+    }
+    #blog3__img{
+        display: block;
+        height: 300px;
+    }
+    #blog2 .blog-post__content{
+        padding-left: 0;
+    }
+    .solutions__list{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .solutions__list__item{
+        width: 35%;
+        margin-top: 30px;
+    }
+    .writing__item{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .writing__item__img{
+        margin: 0;
+    }
+    .writing .list__item__text{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .app{
+        grid-template-columns: 1fr;
+    }
+    .app .content__heading{
+        margin-top: 0px;
+    }
+    .app__content{
+        text-align: center;
+    }
+    .app__content__text{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .app__content__list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .app__content__list li{
+        width: 100%;
+    }
+    .app__img{
+        width: 60%;
+        margin-top: 30px;
+    }
+    .team__list{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0;
+    }
+    .team__list__item{
+        width: 40%;
+        margin-top: 50px;
+    }
+    .feedback__form input{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .feedback__form input[name="email"]{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .feedback__form button{
+        padding: 16px 48px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+    .logo{
+        margin: 0px 4%;
+    }
+    .header__container__text{
+        font-size: 70px;
+    }
+    .solutions__list{
+        margin-top: 30px;
+    }
+    .solutions__list__item{
+        width: 90%;
+    }
+    .solutions__list__item img{
+        width: 70%;
+    }
+    .features__list__item{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    #blog1__img, #blog3__img{
+        height: 250px;
+    }
+    .fourth-block{
+        padding: 60px 0px;
+    }
+    .writing{
+        flex-wrap: wrap;
+    }
+    .writing__item{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .writing__item__img{
+        width: 40px;
+    }
+    .writing__item__img{
+        width: 100%;
+    }
+    .fifth-block{
+        padding-top: 0px;
+    }
+    .app__img{
+        width: 80%;
+    }
+    #first-list-item, #second-list-item, #third-list-item {
+        width: 100%;
+    }
+    .team__list__item{
+        width: 85%;
+    }
+    #heading__C{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .feedback__form{
+        width: 90%;
+    }
+    .feedback__form input{
+        width: 100%;
+    }
+    #message_text{
+        height: 200px;
+    }
+    footer{
+        padding: 30px 30px;
+    }
+    .footer-container{
+        flex-wrap: wrap;
+    }
+    .footer-text{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .header__container__text{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header__container__text{
+        font-size: 50px;
+    }
 }
