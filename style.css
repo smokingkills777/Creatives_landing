@@ -787,9 +787,9 @@ footer{
     .solutions__list__item{
         width: 90%;
     }
-    .solutions__list__item img{
+/*     .solutions__list__item{
         width: 70%;
-    }
+    } */
     .features__list__item{
         width: 90%;
         margin: 0 auto;
