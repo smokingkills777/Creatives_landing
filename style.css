@@ -272,7 +272,7 @@ header a{
     justify-content: center;
 }
 .writing__item__img{
-    background: url(img/icon4.png) center no-repeat;
+    background: url(img/icon4.png) center/cover no-repeat;
     width: 70px;
     height: 70px;
     margin-right: 34px;
@@ -281,7 +281,6 @@ header a{
     width: 77%;
     text-align: left;
 }
-
 /* 5 BLOCK */
 
 .fifth-block{
@@ -595,6 +594,10 @@ footer{
         width: 45%;
         justify-content: space-between;
     }
+    .writing__item__img{
+        width: 50px;
+        height: 50px;
+    }
     .app .content__heading{
         margin-top: 70px;
     }
@@ -700,17 +703,27 @@ footer{
         width: 35%;
         margin-top: 30px;
     }
-    .writing__item{
+    .fourth-block{
+        padding: 100px 0;
+    }
+    .writing{
+        width: 80%;
         flex-wrap: wrap;
-        justify-content: center;
+    }
+    .writing__item{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .writing__item:not(:first-child){
+        margin-top: 50px;
     }
     .writing__item__img{
         margin: 0;
+        width: 40px;
+        height: 40px;
     }
     .writing .list__item__text{
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
+        width: 80%;
     }
     .app{
         grid-template-columns: 1fr;
@@ -775,9 +788,6 @@ footer{
     .solutions__list__item{
         width: 80%;
     }
-/*     .solutions__list__item{
-        width: 70%;
-    } */
     .features__list__item{
         width: 90%;
         margin: 0 auto;
@@ -786,27 +796,19 @@ footer{
     #blog1__img, #blog3__img{
         height: 250px;
     }
-/*     #blog1__img, #blog3__img{
-        height: 100%;
-    } */
     .fourth-block{
         padding: 60px 0px;
-    }
-    .writing{
-        flex-wrap: wrap;
     }
     .writing__item{
         width: 100%;
         margin-top: 30px;
     }
     .writing__item__img{
-        width: 40px;
-    }
-    .writing__item__img{
-        width: 100%;
+        width: 30px;
+        height: 30px;
     }
     .fifth-block{
-        padding-top: 0px;
+        padding-top: 50px;
     }
     .app__img{
         width: 80%;
