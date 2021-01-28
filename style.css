@@ -451,6 +451,7 @@ textarea::placeholder{
     font-size: 24px;
     text-transform: uppercase;
     transition: background-color 0.3s linear;
+    cursor: pointer;
 }
 .feedback__form button:hover{
     background-color: #0d5879;
