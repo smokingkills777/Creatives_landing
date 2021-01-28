@@ -21,6 +21,12 @@ ul{
 input:focus, textarea:focus, button:focus, a:active{
     outline: none;
 }
+button:active, button:focus, img:active, img:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
 a:active{
     border: none;
 }
@@ -220,8 +226,8 @@ header a{
 /* 3 BLOCK */
 
 .solutions{
-    margin-top: 92px;
-    margin-bottom: 110px;
+    padding-top: 92px;
+    padding-bottom: 110px;
 }
 .solutions .sub-heading{
     margin-top: 39px;
@@ -335,8 +341,8 @@ header a{
 /* 6 BLOCK */ 
 
 .team{
-    margin-top: 70px;
-    margin-bottom: 125px;
+    padding-top: 70px;
+    padding-bottom: 125px;
 }
 .team .sub-heading{
     margin-top: 67px;
@@ -634,7 +640,7 @@ footer{
         background-color: rgb(73, 72, 72);
         display: none;
         position: absolute;
-        left: -85px;
+        left: -100px;
         text-align: center;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;

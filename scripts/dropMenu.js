@@ -13,5 +13,7 @@ window.onclick = function(event) {
         openDropdown.classList.remove('show');
       }
     }
+  } else {
+    openDropdown.classList.remove('show');
   }
 }
